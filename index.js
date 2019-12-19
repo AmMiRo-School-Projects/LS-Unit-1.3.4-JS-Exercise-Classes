@@ -145,6 +145,9 @@ class Instructor extends Lambdasian {
   grade(student, subject) {
     return `${student.name} receives a perfect score on ${subject}`;
   }
+  adjustGrade(stud) {
+    stud.grade = stud.grade + Math.random() - Math.random();
+  }
 }
 
 /*
@@ -168,6 +171,7 @@ class Student extends Lambdasian {
     this.previousBackground = object.previousBackground;
     this.className = object.className;
     this.favSubjects = object.favSubjects;
+    this.grade = 70;
   }
   listSubjects() {
     return this.favSubjects.toString();
@@ -177,6 +181,13 @@ class Student extends Lambdasian {
   }
   sprintChallenge(subject) {
     return `${this.name} has begun spring challenge on ${subject}`;
+  }
+  graduate() {
+    if (this.grade > 70) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 
@@ -215,6 +226,25 @@ class ProjectManager extends Instructor {
       + This method, when called, will check the grade of the student and see if they're ready to graduate from Lambda School
       + If the student's grade is above a 70% let them graduate! Otherwise go back to grading their assignments to increase their score.
 */
+
+const studOne = new Student({
+  name: "studOne"
+});
+
+const instructorOne = new Instructor({
+  name: "insOne"
+});
+
+const instructorTwo = new ProjectManager({
+  name: "insTwo"
+});
+
+console.log(studOne.grade);
+console.log(instructorOne.adjustGrade(studOne));
+console.log(studOne.grade);
+console.log(instructorTwo.adjustGrade(studOne));
+console.log(studOne.grade);
+console.log(studOne.graduate());
 
 ///////// END OF CHALLENGE /////////
 ///////// END OF CHALLENGE /////////
