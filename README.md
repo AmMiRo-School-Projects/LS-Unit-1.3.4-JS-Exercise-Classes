@@ -4,8 +4,8 @@ This challenge focuses on using the new for ES6 `class` syntax.
 
 ##### Index
 
-* [Instructions](#instructions)
-* [Get Started](#get-started)
+- [Instructions](#instructions)
+- [Get Started](#get-started)
 
 ## Instructions
 
@@ -15,7 +15,7 @@ Find the file `index.js` and complete the tasks until all of your tests pass.
 
 **Plan to commit & push every time you get a new test passing!**. Committing often makes it SO much easier to figure out "what broke my code", and helps your TL keep track of how you're doing.
 
-If you run into trouble while coding, fight the good fight for 20 minutes and then get on the help channel. __Remember to formulate your help request in a professional manner__ - like you would at the job - by including error messages, screenshots, and any other pertinent information about the problem, as well as what things you have attempted already while trying to solve it.
+If you run into trouble while coding, fight the good fight for 20 minutes and then get on the help channel. **Remember to formulate your help request in a professional manner** - like you would at the job - by including error messages, screenshots, and any other pertinent information about the problem, as well as what things you have attempted already while trying to solve it.
 
 ## Get Started
 
@@ -30,3 +30,5 @@ If you run into trouble while coding, fight the good fight for 20 minutes and th
 1. Work on your branch, push commits and create PR as usual.
 
 <img alt='instructions screenshot' src='./instructions.png'>
+
+STRETCH PROBLEM (no tests!) - Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100. - Now that our students have a grade build out a method on the Instructor (this will be used by _BOTH_ instructors and PM's) that will randomly add or subtract points to a student's grade. _Math.random_ will help. - Add a graduate method to a student. + This method, when called, will check the grade of the student and see if they're ready to graduate from Lambda School + If the student's grade is above a 70% let them graduate! Otherwise go back to grading their assignments to increase their score.
