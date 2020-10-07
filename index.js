@@ -146,7 +146,7 @@ class Instructor extends Lambdasian {
     return `${student.name} receives a perfect score on ${subject}`;
   }
   adjustGrade(stud) {
-    stud.grade = stud.grade + Math.random() - Math.random();
+    stud.grade = stud.grade + Math.random() * 10 - Math.random() * 10;
   }
 }
 
@@ -239,12 +239,15 @@ const instructorTwo = new ProjectManager({
   name: "insTwo"
 });
 
-console.log(studOne.grade);
-console.log(instructorOne.adjustGrade(studOne));
-console.log(studOne.grade);
-console.log(instructorTwo.adjustGrade(studOne));
-console.log(studOne.grade);
-console.log(studOne.graduate());
+console.log("Initial grade is:", studOne.grade);
+console.log("Instructor adjusts grade", instructorOne.adjustGrade(studOne));
+console.log("Grade after first adjustment:", studOne.grade);
+console.log(
+  "Project Manager adjusts grade",
+  instructorTwo.adjustGrade(studOne)
+);
+console.log("Grade after sectond adjustment:", studOne.grade);
+console.log("Student will graduate.", studOne.graduate());
 
 ///////// END OF CHALLENGE /////////
 ///////// END OF CHALLENGE /////////
